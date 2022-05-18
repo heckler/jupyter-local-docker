@@ -1,0 +1,12 @@
+version: "3"
+
+services: 
+  jupyter_lab:
+    container_name: jupyter_lab
+    build: .
+    ports: 
+      - "4000:8888"
+    environment: 
+      - JUPYTER_ENABLE_LAB=yes
+    volumes: 
+      - .jupyter_local:/home/jovyan/work
